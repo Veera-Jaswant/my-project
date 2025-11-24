@@ -7,44 +7,75 @@ import Project from './components/Projects'
 import Skills from './components/Skills'
 import type { SectionRefs } from './types/SectionsRef'
 import Contact from './components/Contact'
+import type { NavigationTabs, Tabs } from './types/NavigationTabs'
 
 
 
 function App() {
-const refs: SectionRefs = {
-  homeRef: useRef<HTMLDivElement>(null),
-  educationRef: useRef<HTMLDivElement>(null),
-  skillsRef: useRef<HTMLDivElement>(null),
-  projectsRef: useRef<HTMLDivElement>(null),
-  contactRef: useRef<HTMLDivElement>(null),
-};
 
-  const scrollToSection = (section: React.RefObject<HTMLDivElement>) => {
-    section?.current?.scrollIntoView({behavior: "smooth"});
+  const homeRef = useRef<HTMLDivElement | null>(null);
+  const educationRef = useRef<HTMLDivElement | null>(null);
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const recommendationsRef = useRef<HTMLDivElement | null>(null);
+
+  
+  const scrollToSection = (tabRef: React.RefObject<HTMLDivElement | null>) => {
+    tabRef?.current?.scrollIntoView({ behavior: "smooth" });
   }
+
+
+
+  const navigationTabs: NavigationTabs = {
+    items: [
+      {
+        label: "Home",
+        elementRef: homeRef
+      },
+      {
+        label: "Education",
+        elementRef: educationRef
+      },
+      {
+        label: "Skills",
+        elementRef: skillsRef
+      },
+      {
+        label: "Projects",
+        elementRef: projectsRef
+      },
+      {
+        label: "Recommendations",
+        elementRef: recommendationsRef
+      }
+    ],
+    scrollTo: scrollToSection
+  }
+
+  
 
 
   return (
 
     <div>
-      <Navbar refs={refs} scrollToSection={scrollToSection}/>
+      <Navbar items= {navigationTabs.items} scrollTo={navigationTabs.scrollTo}/>
 
-      <section ref={refs.homeRef} className="h-screen w-full flex  place-content-center">
+      <section ref={homeRef} className="h-screen w-full flex  place-content-center">
         <Home />
       </section>
 
-      <section ref={refs.educationRef}>
+      <section ref={educationRef}>
         <Education />
       </section>
 
-      <section ref={refs.skillsRef}>
+      <section ref={skillsRef}>
         <Skills />
       </section>
 
-      <section ref={refs.projectsRef}>
+      <section ref={projectsRef}>
         <Project />
       </section>
-       <section ref={refs.contactRef}>
+      <section ref={recommendationsRef}>
         <Contact />
       </section>
     </div>
