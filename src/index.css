@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base{
+  html {
+    @apply bg-[#0d0d1f] text-white
+  }
+}
+
+@layer components{
+  .skill-title{
+    font-family: 'Space Grotesk', sans-serif;
+    @apply mb-3  text-blue-500 uppercase font-bold
+  }
+}
