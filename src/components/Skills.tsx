@@ -94,12 +94,12 @@ const Skills = () => {
 
                 <div className="flex flex-col flex-1 h-full">
                     <div className="text-xl pl-6 font-bold bg-linear-to-r from-orange-400 via-pink-500 to-blue-500 inline-block bg-clip-text text-transparent w-fit">{skillCategories.find((catergory) => catergory.tabId == selectedDivTab)?.title}</div>
-                    <div className=" flex-1 grid md:grid-cols-3 grid-col-1 overflow-auto auto-rows-auto gap-1">
+                    <div className=" flex-1 grid grid-cols-3 overflow-auto auto-rows-min gap-1">
                         {
                             skillCategories.find((catergory) => catergory.tabId == selectedDivTab)?.skills.map((skill) => (
-                                <div key={skill.id} className="flex border-2 rounded-lg  gap-2 p-5 m-5">
-                                    <img src={icons[skill.logo]} alt={skill.title} className="w-[25px] h-[25px] cursor-pointer" />
-                                    <div className="flex flex-col">
+                                <div key={skill.id} className="p-3 sm:flex sm:border-2 sm:rounded-lg  sm:gap-2 sm:p-5 sm:m-5">
+                                    <img src={icons[skill.logo]} alt={skill.title} className="w-20 h-20 sm:w-[25px] sm:h-[25px] cursor-pointer" />
+                                    <div className="hidden sm:flex sm:flex-col">
                                         <div className="font-bold">{skill.title}</div>
                                         <div className="text-md text-gray-500">{skill.subtitle}</div>
                                     </div>
