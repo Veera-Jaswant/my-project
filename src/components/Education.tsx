@@ -26,11 +26,11 @@ const Education = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center md:pt-10 pt-0">
+            <div className="flex justify-center items-center lg:pt-10 pt-1">
                 <div className=" flex flex-col gap-2">
                     {courses.map((course) => (
                         <div
-                            className="border-2 rounded-full md:p-2 p-1.5 text-center w-96"
+                            className="border-2 rounded-full p-2 text-center w-96"
                             key={course.id}
                         >
                             {course.title}

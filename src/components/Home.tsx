@@ -7,16 +7,13 @@ const Home = () => {
                         place-content-center place-items-center px-3">
 
             <div className="w-64 h-64 rounded-full overflow-hidden shrink-0">
-                <img
-                    src="portfolio-profile-pic.jpg"
-                    alt="PortfolioProfilePic"
-                    className="w-full h-full object-cover"
-                />
+                <img src="portfolio-profile-pic.jpg" alt="PortfolioProfilePic"
+                     className="w-full h-full object-cover"/>
             </div>
 
 
             <h1 className="md:text-4xl text-2xl font-extrabold leading-tight">
-                Hi, I'm
+                <div className="hidden md:block">Hi, I'm</div>
                 <span> Veera Jaswant Reddy Annem</span>
             </h1>
 
