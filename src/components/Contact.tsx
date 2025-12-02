@@ -3,8 +3,9 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className="min-h-screen flex flex-col items-center justify-center px-6 lg:px-32 py-20 bg-white"
+            className="min-h-screen flex items-center justify-center px-6 lg:px-32 py-20"
         >
+            <div className="flex flex-col">
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 text-center">
                 Contact Me
@@ -15,6 +16,7 @@ const Contact = () => {
                 Have a question, project idea, or want to collaborate? Feel free to reach out!
                 I'm always open to discussing new opportunities.
             </p>
+            </div>
 
             {/* Contact Form */}
             <form
@@ -67,7 +69,7 @@ const Contact = () => {
             </form>
 
             {/* Social Icons */}
-            <div className="flex gap-6 mt-10">
+            <div className="flex gap-6 mt-10 bg-amber-400">
                 <a
                     href="https://www.linkedin.com/in/your-profile"
                     target="_blank"

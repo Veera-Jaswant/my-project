@@ -15,9 +15,9 @@ const Education = () => {
         { id: "10", title: "Computer Vision", linearGradient: "linear-gradient(135deg, #fceabb 0%, #f8b500 100%)" },
     ];
     return (
-        <div className="grid sm:grid-cols-2 h-screen w-screen items-center">
-            <div className="flex flex-col justify-center items-center">
-                <img src={UCFLogo} alt="UCF" className="w-[300px]" />
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 h-screen w-screen items-center">
+            <div className="flex md:flex-col justify-center items-center">
+                <img src={UCFLogo} alt="UCF" className="md:w-[300px] w-24" />
                 <div className="mt-5">
                     <h4 className="text-2xl">Master's in Computer Science</h4>
                     <div>University of Central Florida</div>
@@ -26,11 +26,11 @@ const Education = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center pt-10">
+            <div className="flex justify-center items-center md:pt-10 pt-0">
                 <div className=" flex flex-col gap-2">
                     {courses.map((course) => (
                         <div
-                            className="border-2 rounded-full p-2 text-center w-96"
+                            className="border-2 rounded-full md:p-2 p-1.5 text-center w-96"
                             key={course.id}
                         >
                             {course.title}

@@ -5,9 +5,9 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Project from './components/Projects'
 import Skills from './components/Skills'
-import type { SectionRefs } from './types/SectionsRef'
 import Contact from './components/Contact'
-import type { NavigationTabs, Tabs } from './types/NavigationTabs'
+import type { NavigationTabs } from './types/NavigationTabs'
+import Recommendation from './components/Recommendation'
 
 
 
@@ -18,6 +18,8 @@ function App() {
   const skillsRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const recommendationsRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
 
   
   const scrollToSection = (tabRef: React.RefObject<HTMLDivElement | null>) => {
@@ -47,6 +49,10 @@ function App() {
       {
         label: "Recommendations",
         elementRef: recommendationsRef
+      },
+      {
+        label: "Contact",
+        elementRef: contactRef
       }
     ],
     scrollTo: scrollToSection
@@ -76,6 +82,10 @@ function App() {
         <Project />
       </section>
       <section ref={recommendationsRef}>
+        <Recommendation />
+      </section>
+
+      <section ref={contactRef}>
         <Contact />
       </section>
     </div>

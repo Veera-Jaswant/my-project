@@ -80,10 +80,11 @@ const Skills = () => {
 
 
     return (
-        <div className=" p-5 h-full w-full flex flex-col ">
-            <h1 className="text-3xl font-bold mb-3 text-center">Skills & Technologies</h1>
-            <div className="flex flex-1 gap-5">
-                <div className="flex flex-col gap-2 cursor-pointer">
+        <div className="flex flex-col h-screen w-screen pt-15">
+
+            <div className="flex gap-5 px-5">
+                
+                <div className="flex flex-col h-[500px] gap-2 cursor-pointer">
                     {
                         tabs.map((tab: string) => (
                             <div id={tab} key={tab} className={`flex-1 w-1 ${selectedDivTab == tab ? "bg-linear-to-b from-orange-500 via-pink-500 to-blue-500" : "bg-gray-500"} rounded-lg`} onClick={() => setSlectedDivTab(tab)}></div>
@@ -91,9 +92,9 @@ const Skills = () => {
                     }
                 </div>
 
-                <div className="flex flex-col flex-1">
+                <div className="flex flex-col flex-1 h-full">
                     <div className="text-xl pl-6 font-bold bg-linear-to-r from-orange-400 via-pink-500 to-blue-500 inline-block bg-clip-text text-transparent w-fit">{skillCategories.find((catergory) => catergory.tabId == selectedDivTab)?.title}</div>
-                    <div className=" flex-1 grid grid-cols-3 grid-rows-4 gap-1">
+                    <div className=" flex-1 grid md:grid-cols-3 grid-col-1 overflow-auto auto-rows-auto gap-1">
                         {
                             skillCategories.find((catergory) => catergory.tabId == selectedDivTab)?.skills.map((skill) => (
                                 <div key={skill.id} className="flex border-2 rounded-lg  gap-2 p-5 m-5">

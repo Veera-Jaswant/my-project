@@ -7,14 +7,14 @@ const Navbar = ({ items, scrollTo }: NavigationTabs) => {
   }
 
   return (
-    <div className=" bg-gray-900 fixed top-0 left-0 w-full flex justify-end gap-10 p-5 font-bold text-white">
+    <div className="fixed top-0 left-0 w-full flex justify-end gap-10 p-5 font-bold">
       {
         items.map((item: NavigationItem) => (
           <button className="cursor-pointer" onClick={() => scrollTo(item.elementRef)}>{item.label}</button>
         ))
       }
 
-      <button onClick={DownloadResume}>Resume</button>
+      <button className="cursor-pointer" onClick={DownloadResume}>Resume</button>
     </div>
 
   )
