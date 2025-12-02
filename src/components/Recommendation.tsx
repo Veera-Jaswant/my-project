@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import LinkedIn from "../assets/linkedin.svg";
 const Recommendation = () => {
