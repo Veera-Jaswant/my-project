@@ -12,5 +12,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/jaswant-portfolio',
+  base: '/my-project/',
 })
