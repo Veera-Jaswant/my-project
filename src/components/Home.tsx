@@ -15,13 +15,13 @@ const Home = () => {
             </div>
 
 
-            <h1 className="md:text-4xl text-lg font-extrabold leading-tight">
+            <h1 className="md:text-4xl text-2xl font-extrabold leading-tight">
                 Hi, I'm
-                <span className="block sm:inline text-w"> Veera Jaswant Reddy Annem</span>
+                <span> Veera Jaswant Reddy Annem</span>
             </h1>
 
             <div className="bg-linear-to-r from-purple-400 via-pink-500 to-red-500 inline-block bg-clip-text text-transparent">
-                <span className="md:text-3xl text-lg font-bold">
+                <span className="md:text-3xl text-2xl font-bold">
                     <Typewriter
                         words={[
                             "Full Stack Web Developer",
