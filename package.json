@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Veera-Jaswant/my-project/",
+  "homepage": "https://Veera-Jaswant.github.io/my-project/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
